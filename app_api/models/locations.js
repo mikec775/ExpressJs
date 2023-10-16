@@ -1,17 +1,18 @@
 const mongoose = require('mongoose');
 
 const openingTimeSchema = new mongoose.Schema({
-days: {
-type: String,
-required: true
-},
-opening: String,
-closing: String,
-closed: {
-type: Boolean,
-required: true
-}
+  days: {
+    type: String,
+    required: false
+  },
+  opening: String,
+  closing: String,
+  closed: {
+    type: Boolean,
+    required: false
+  }
 });
+
 const reviewSchema = new mongoose.Schema({
 author: String,
 rating: {
