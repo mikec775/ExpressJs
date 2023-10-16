@@ -18,7 +18,7 @@ const locationsCreate = function(req, res) {
   closing: req.body.closing2,
   closed: req.body.closed2,
   }]
-  }, (err, location) => { 
+  }).then((err, location) => { 
   if (err) {
   res
   .status(400)
@@ -28,7 +28,7 @@ const locationsCreate = function(req, res) {
   .status(201)
   .json(location);
   }
-  });
+  })
   };
   
 const locationsListByDistance = function (req, res) { res
